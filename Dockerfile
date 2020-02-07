@@ -33,7 +33,7 @@ RUN npm i && npm audit fix
 # - then it needs to copy in all files from current directory
 COPY . .
 # - then it needs to start container with command '/sbin/tini -- node ./bin/www'
-CMD [ "/sbin/tini", "--", "npm", "run" "start" ]
+CMD [ "/sbin/tini", "--", "node", "./bin/www" ]
 # - in the end you should be using FROM, RUN, WORKDIR, COPY, EXPOSE, and CMD commands
 
 # Bonus Extra Credit
